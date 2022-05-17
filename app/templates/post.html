@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="../static/styles.css">
+{% endblock %}
+  {% block content%}
+  <div class="container">
+    <div class="row">
+    <div class="column">
+    <div class="card pitch mt-4 ml-4 ">
+        <div class="card-body">
+          <div>
+            <img
+            src="{{ url_for('static', filename='photos/default.jpeg')}}"
+            class="img-fluid rounded-circle"
+            style="max-height: 80px; width: 80px;"/> 
+                <h3 class="card-title" style="color:maroon; font-weight:500;">{{post.author.username}}'s post.</h3>
+          </div>
+          <h4 class="card-title" style="color:navy; font-weight:500; font-family: sans-serif;">Category:{{post.category}}</h4>
+        
+          <h4 class="card-title" style="font-family: cursive;">{{post.pitch}}
+          </h4>
+          <h4><a href="{{post.link}}" target="_blank" class="btn btn-primary">Read more</a></h4>
+          <a class="btn btn-outline-light btn-floating m-1" href="" role="button"
+          ><ion-icon name="thumbs-up"></ion-icon></a>
+          <a class="btn btn-outline-light btn-floating m-1" href="" role="button"
+          ><ion-icon name="thumbs-down"></ion-icon></a>
+           <div class="card-footer">
+            <small class="text-muted">Posted on: {{post.date_posted}}</small>
+          </div>
+          <a href="{{url_for('main.comment', post_id= post.id)}}" class="btn btn-info">Add Comment</a>
+          {% for comment in comments %}
+          <p>Comment: {{comment.text}}</p>
+          {% endfor %}
+        </div>
+        </div>
+        </div>
+        </div>
+      </div>
+    
+    
+    {% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<div class="content-section container">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend>New Comment</legend>
+            <div class="form-group">
+               {{form.text}}
+               </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit}}
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock %}

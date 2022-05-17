@@ -1,0 +1,55 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+.color{
+  color: rgb(198, 247, 250);
+  font-weight: 600;
+}
+.pitch{
+  margin-top: 10px;
+  margin-left: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  text-align: center;
+  background:linear-gradient(to right ,white,skyblue);
+  /* width: 1000px;
+  height: 400px; */
+  font-weight: 600;
+  align-content: center;
+  font-family: sans-serif;
+  color: black;
+  margin-left: 50px;
+  
+            
+}
+h6{
+  color: black;
+  font-weight: 400;
+}
+
+body{
+  /* background-color: blue; */
+  align-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(../static/photos/dark.jpeg);
+ 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img{
+  width: 300px;
+  height: 200px;
+}
+
+.row {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap : 1rem
+}
+
+
+
